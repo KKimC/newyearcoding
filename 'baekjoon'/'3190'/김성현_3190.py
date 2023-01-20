@@ -41,6 +41,7 @@ mx, my = 0, 0 # 뱀의 현재 위치
 s_1 = 1 # 뱀은 동쪽을 향하고 있음
 sec = 0 # 시간이 얼마나 흘렀는가
 s_len = 1 # 뱀 길이
+check = False
 
 def turn_d(): # D방향 회전
   global s_1
@@ -50,30 +51,39 @@ def turn_l(): # L방향 회전
   global s_1
   s_1 = s_1 - 1 if s_1 != 0 else 3
 
-def go_straight(): # 앞으로 갈 수 있다면 앞으로 가고 시간 1초 지남 못 가면 False 반환
-  global mx, my, sec, arr
-  if mx + dx[s_1] >= n or my + dy[s_1] >= n:
-    return False
-  elif arr[my + dy[s_1]][mx + dx[s_1]] == 1:
-    return False
-  else:
-    mx += dx[s_1]
-    my += dy[s_1]
-    arr[my][mx] = 1
-    sec += 1
-    return True
-
 def cal(a, b, c, d):
-  return abs(a + b) + abs(c + d)
+  return abs(a - c) + abs(b - d)
 
 def check_all_arr(): # 뱀 꼬리 지우기
   global arr
   for i in range(n):
     for j in range(n):
       if arr[i][j] == 1:
-        if cal(i, j, my, mx) >= s_len:
+        if cal(i, j, my, mx) == s_len:
           arr[i][j] = 0
-          print(arr[i][j])
+
+
+def go_straight(): # 앞으로 갈 수 있다면 앞으로 가고 시간 1초 지남 못 가면 False 반환
+  global mx, my, sec, arr, check, s_len
+  if mx + dx[s_1] >= n or my + dy[s_1] >= n:
+    check = True
+    return False
+  elif mx + dx[s_1] < 0 or my + dy[s_1] < 0:
+    check = True
+    return False
+  elif arr[my + dy[s_1]][mx + dx[s_1]] == 1:
+    return False
+  else:
+    if arr[my][mx] == 2:
+      s_len += 1
+    else:
+      check_all_arr()
+    mx += dx[s_1]
+    my += dy[s_1]
+    arr[my][mx] = 1
+    
+    sec += 1
+    return True
 
 def debugging(arr):
   for i in arr :
@@ -81,13 +91,21 @@ def debugging(arr):
         print(j,end=" ")
     print()
   print()
+print("sec :" , sec)
+debugging(arr)
 
 while go_straight():
+  print("s_len : ", s_len)
+  print("sec :" , sec)
   debugging(arr)
   print(dic)
-  print("sec :" , sec)
-  if sec in dic:
-    if dic[sec] == "D": turn_d()
-    elif dic[sec] == "L": turn_l()
-  check_all_arr()
-print(sec)
+  kkk = sec
+  if kkk in dic:
+      if dic[kkk] == "D": turn_d()
+      elif dic[kkk] == "L": turn_l()
+  if mx + dx[s_1] >= n or my + dy[s_1] >= n:
+    break
+  elif mx + dx[s_1] < 0 or my + dy[s_1] < 0:
+    break
+  
+print(sec+1)
