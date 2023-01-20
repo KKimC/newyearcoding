@@ -28,8 +28,6 @@ for _ in range(T):
                 ny = y+dy[i] # 방향벡터
                 if 0<=nx<N and 0<=ny<M and visited[nx][ny]==False and graph[nx][ny]!=0:
                     visited[nx][ny] = True
-                    x = nx
-                    y = ny
                     # print(x,y)
                     cnt+=1
                     q.append((x,y))
