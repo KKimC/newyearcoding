@@ -58,4 +58,4 @@ for i in range(N):
             arr.append(a-b) # 빼서 넣자  그러면 arr[0]에 1시간 후, 녹은 치즈 영역을 받게 된다
             
 print(len(arr)+1) # len(arr)하면 그럼 테케를 넣어보면 2시간으로 나올테니  +1 처리해주자
-print(arr[len(arr)]) # 마지막으로 녹기 1시간 전꺼를 출력
+print(arr[len(arr)-1]) # 마지막으로 녹기 1시간 전꺼를 출력
