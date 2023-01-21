@@ -1,3 +1,4 @@
+########### UnboundLocalError: local variable 'k' referenced before assignment <- 에러 뜨는중입니다 ############
 # 아이디어
 # 1. 치즈 상태 입력받고 주어진 2차원 맵에서 치즈가 얼마나 공간을 차지하는지 카운팅하자. (bfs함수)
 # 2. melting 함수를 선언해서 bfs의 결과값을 전달받은 다음, 테두리 처리된 부분을 탐색해가면서
