@@ -1,157 +1,146 @@
+import sys
 
-from sys import stdin
+input = sys.stdin.readline
 
 n, m = map(int, input().split())
-
 graph = []
 
+# 그래프 입력 받음
 for _ in range(n):
-    graph.append(list(map(int, stdin.readline().rstrip().split())))
+    graph.append(list(map(int, input().rstrip().split())))
 
-    
-# 1번 ----
-def long(i, j, graph):
-    a = len(graph)
+
+# graph 돌면서 가장 왼쪽 위 점인 i, j를 기준으로 4개의 정사각형을 체크.
+# 만약 모양이 만들어질 수 없다면 0을 반환.
+
+# 1. 일자 (----)
+def type_one(i, j, graph):
     b = len(graph[0])
 
-    if 0 <= i < a and 0 <=j+3< b:
-        one = graph[i][j]
-        two = graph[i][j+1]
-        three = graph[i][j+2]
-        four = graph[i][j+3]
-        return (one + two + three + four)
-    else:
-        return 0
+    result = 0
 
-      
-# 2번 정사각형
-def rect(i, j, graph):
-    a = len(graph)
-    b = len(graph[0])
-
-    if 0 <= i+1 < a and 0 <= j+1 < b:
-        one = graph[i][j]
-        two = graph[i][j+1]
-        three = graph[i+1][j]
-        four = graph[i+1][j+1]
-        return (one + two + three+ four)
-    else:
-        return 0
-
-      
-# 3번 L
-def el(i, j, graph):
-    a = len(graph)
-    b = len(graph[0])
-
-    if 0 <= i + 2 < a and 0 <= j+1 < b:
-        one = graph[i][j]
-        two = graph[i+1][j]
-        three = graph[i+2][j]
-        four = graph[i+2][j+1]
-        return (one + two + three + four)
-    else:
-        return 0
-
-      
-# 4번 번개
-def thun(i, j, graph):
-    a = len(graph)
-    b = len(graph[0])
-
-    if 0 <= i+2 < a and 0 <= j + 1 < b:
-        one = graph[i][j]
-        two = graph[i+1][j]
-        three = graph[i+1][j+1]
-        four = graph[i+2][j+1]
-        return (one + two + three + four)
+    if j+3 < b:
+        for k in range(4):
+            result += graph[i][j+k]
+        return result
     else:
         return 0
 
 
-# 5번 산
-def moun(i, j, graph):
+# 2. 정사각형
+def type_two(i, j, graph):
     a = len(graph)
     b = len(graph[0])
 
-    if 0 <= i+1 < a and 0 <= j+2 < b:
-        one = graph[i][j]
-        two = graph[i][j+1]
-        three = graph[i][j+2]
-        four = graph[i+1][j+1]
-        return (one + two + three + four)
+    result = 0
+    if i + 1 < a and j + 1 < b:
+        for a in range(2):
+            for b in range(2):
+                result += graph[i+a][j+b]
+        return result
     else:
         return 0
 
 
-# 왼쪽으로 돌리는 그래프
-def turn_right(graph):
+# 3. L자
+def type_three(i, j, graph):
+    a = len(graph)
+    b = len(graph[0])
 
-    #graph = [[a]*y for _ in range(x)]
-
-    # row
-    x = len(graph)
-    # col
-    y = len(graph[0])
-
-    new_graph = [[0]*x for i in range(y)]
+    result = 0
+    if i + 2 < a and j + 1 < b:
+        result = graph[i][j] + graph[i+1][j] + graph[i+2][j] + graph[i+2][j+1]
+        return result
+    else:
+        return 0
 
 
-    for i in range(x):
-        for j in range(y):
-            new_graph[y-j-1][i] = graph[i][j]
+# 4. 번개
+def type_four(i, j, graph):
+    a = len(graph)
+    b = len(graph[0])
+
+    result = 0
+    if i + 2 < a and j + 1 < b:
+        result = graph[i][j] + graph[i+1][j] + graph[i+1][j+1] + graph[i+2][j+1]
+        return result
+    else:
+        return 0
+
+
+# 5. 산
+def type_five(i, j, graph):
+    a = len(graph)
+    b = len(graph[0])
+
+    result = 0
+    if i + 1 < a and j + 2 < b:
+        result = graph[i][j] + graph[i][j+1] + graph[i][j+2] + graph[i+1][j+1]
+        return result
+    else:
+        return 0
+
+
+# 그래프 오른쪽으로 90도 돌림
+def turn_right(graph: list) -> list:
+    a = len(graph)
+    b = len(graph[0])
+
+    new_graph = [[0 for _ in range(a)] for _ in range(b)]
+
+    for i in range(a):
+        for j in range(b):
+            new_graph[j][a-1-i] = graph[i][j]
 
     return new_graph
 
-  
-def zau(graph):
-    # row
-    x = len(graph)
-    # col
-    y = len(graph[0])
 
-    new_graph = [[0]*y for _ in range(x)]
+# 그래프 좌우로 변경
+def zau(graph: list) -> list:
+    a = len(graph)
+    b = len(graph[0])
 
-    for i in range(x):
-        for j in range(y):
-            new_graph[i][y-j-1]= graph[i][j]
+    new_graph = [[0 for _ in range(b)] for _ in range(a)]
+
+    for i in range(a):
+        for j in range(b):
+            new_graph[i][b-j-1] = graph[i][j]
 
     return new_graph
-
 
 d = 0
-max_value = 0
+max_cnt = 0
 
+# 오른쪽으로 회전(첫번째 순서에는 그대로) -> 좌우반전 순서로 그래프 변경하면서
+# 5종류 폴리오미노 안의 숫자 최대값을 구한다.
+while d <= 3:
 
-while d <=3 :
+    # 그래프 모양 그대로
     for i in range(len(graph)):
         for j in range(len(graph[0])):
-            cnt_1 = long(i, j, graph)
-            cnt_2 = rect(i, j, graph)
-            cnt_3 = el(i, j, graph)
-            cnt_4 = thun(i, j, graph)
-            cnt_5 = moun(i, j, graph)
-            value = max(cnt_1, cnt_2, cnt_3, cnt_4, cnt_5)
-            if value > max_value:
-                max_value = value
+            cnt_one = type_one(i, j, graph)
+            cnt_two = type_two(i, j, graph)
+            cnt_three = type_three(i, j, graph)
+            cnt_four = type_four(i, j, graph)
+            cnt_five = type_five(i, j, graph)
 
+            max_cnt = max(max_cnt, cnt_one, cnt_two, cnt_three, cnt_four, cnt_five)
+
+    # 좌우 반전
     new = zau(graph)
+
     for i in range(len(new)):
         for j in range(len(new[0])):
-            cnt_1 = long(i, j, new)
-            cnt_2 = rect(i, j, new)
-            cnt_3 = el(i, j, new)
-            cnt_4 = thun(i, j, new)
-            cnt_5 = moun(i, j, new)
-            value = max(cnt_1, cnt_2, cnt_3, cnt_4, cnt_5)
-            if value > max_value:
-                max_value = value
+            cnt_one = type_one(i, j, new)
+            cnt_two = type_two(i, j, new)
+            cnt_three = type_three(i, j, new)
+            cnt_four = type_four(i, j, new)
+            cnt_five = type_five(i, j, new)
 
-    graph = zau(new)
+            max_cnt = max(max_cnt, cnt_one, cnt_two, cnt_three, cnt_four, cnt_five)
 
-    #graph를 turn_right함
+    d += 1
     graph = turn_right(graph)
-    d+=1
 
 
-print(max_value)
+print(max_cnt)
