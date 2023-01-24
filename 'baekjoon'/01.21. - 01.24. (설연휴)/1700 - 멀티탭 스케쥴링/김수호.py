@@ -23,7 +23,7 @@ while alist:
         for i in aa:  # 2 in {2: 200, 3: 200}
             for j in range(len(alist)):
                 if alist[j] == i:
-                    aa[i] = j  # 거리 추가
+                    aa[i] = j  # 거리 갱신
                     break
         aa = sorted(aa.items(), key = lambda x: x[1], reverse = True)
         u = alist.popleft()
