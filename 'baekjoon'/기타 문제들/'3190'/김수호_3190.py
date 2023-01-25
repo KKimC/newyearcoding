@@ -1,104 +1,117 @@
+from collections import deque
+
 n = int(input())
 a = int(input())
 
 graph = [[0]*n for _ in range(n)]
+graph[0][0] = 4  # 머리
 visited = [[False]*n for _ in range(n)]
-for _ in range(a):
+for _ in range(a):                        # 사과 넣기
     x,y = map(int, input().split())
     graph[x-1][y-1] = 1
-graph[0][0] = 4
-dx = [0, 1, 0, -1]
+
+dx = [0, 1, 0, -1]  # 동 남 서 북 순서로(우회전 순으로)
 dy = [1, 0, -1, 0]
-d = 0
-a = 0
+d = 0  # 시작 방향 동쪽
+a = 0  # 사과 여부 (1이면 있음)
 t = 0
+
+
 m = int(input())
 move = {}
 for _ in range(m):
     x, y = map(str, input().split())
     move[int(x)] = y
 
+# 아이디어: 큐 안에 들어있는 순서대로 그냥 자기 방향 따라 움직이도록 하자. 큐를 두개 만들어서 번갈아 하는 식으로. 
 
-def head(x, y, d):
-    global graph, a
-
-    if graph[x][y] != 4:
-        return None
-    nx = x+dx[d]
-    ny = y+dy[d]
-    if 0<=nx<len(graph) and 0<=ny<len(graph):
-        if graph[nx][ny] == 1:
-            a = 1
-        elif graph[nx][ny] == 3:
-            a = -5
-        graph[nx][ny] = 4
-        graph[x][y] = -1
-    else:
-        a = -5
-
-
-def body(x, y):
-    global graph
-    
-    if graph[x][y] != -1:
-        return None
-    for i in range(4):
-        nx = x+dx[i]
-        ny = y+dy[i]
-        if 0<=nx<len(graph) and 0<=ny<len(graph):
-            if graph[nx][ny] == 3 and not visited[nx][ny]:
-                visited[x][y] = True
-                graph[x][y], graph[nx][ny] = graph[nx][ny], graph[x][y]
-                body(nx, ny)
-
-
-def tail():
-    global graph, visited, a
-    jj = False
-    for i in range(n):
-        for j in range(n):
-            if graph[i][j] == -1:
-                x, y = i, j
-    
-                if a == 1:
-                    graph[x][y] = 3
-                elif a == 0:
-                    graph[x][y] = 0
-                visited = [[False]*n for _ in range(n)]
-                jj = True
-                break
-        if jj: break
-
-
+baem = deque([[0,0,4,d,t]])  # 순서대로 x좌표, y좌표, 번호(4:머리), 방향(시작: 동쪽), 시간
+baem2 = deque([])
+TF = False
 while True:
-    t += 1
-    u = False
-    for i in range(n):
-        for j in range(n):
-            if graph[i][j] == 4:
-                xx, yy = i, j
-                u = True
-                break
-        if u: break
+    apple = 0
+    while baem:
+        x, y, aa, dd, tt = baem.popleft()
+        nx = x + dx[dd]
+        ny = y + dy[dd]
+        tt += 1
 
-    a = 0
-    head(xx,yy,d)
-    if a == -5:
-        print(t)
+        if 0<=nx<n and 0<=ny<n:
+
+            ddd = dd
+            if tt in move:
+                dd = (dd+1)%4 if move[tt] == 'D' else (dd+3)%4
+
+            if graph[nx][ny] == 3:  # 몸통이면. 아래 break 후부터 정상적일 때 코드
+                TF = True
+                break
+            if graph[nx][ny] == 1:                    # 사과 있으면 apple = 1로 기록해놓기
+                apple = 1
+            if not baem:  # 마지막 꼬리이면
+                baem2.append([nx, ny, aa, dd, tt])
+                graph[nx][ny] = aa
+                if apple == 1:                        # apple = 1이면 3 넣고, 0이면 지우기
+                    apple = 0
+                    graph[x][y] = 3
+                    baem2.append([x,y, 3, ddd, tt-1])
+                else:                                 # apple = 0이면
+                    graph[x][y] = 0
+            
+            else:  # 아니면
+                baem2.append([nx, ny, aa, dd, tt])
+                graph[nx][ny] = aa
+                graph[x][y] = 0
+
+
+        else:  # 벽이면
+            TF = True
+            break
+
+
+    if TF:
+        print(tt)
         break
 
-    for i in range(n):
-        for j in range(n):
-            if graph[i][j] == -1:
-                body(i,j)
-                u = False
-                break
-        if not u:
-            break
-    tail()
+    apple = 0
+    while baem2:
+        x, y, aa, dd, tt = baem2.popleft()
+        nx = x + dx[dd]
+        ny = y + dy[dd]
+        tt += 1
 
-    if t in move:
-        if move[t] == 'D':
-            d = (d+1)%4
-        elif move[t] == 'L':
-            d = (d+3)%4
+        if 0<=nx<n and 0<=ny<n:
+            
+            ddd = dd
+            if tt in move:
+                dd = (dd+1)%4 if move[tt] == 'D' else (dd+3)%4
+
+            if graph[nx][ny] == 3:  # 몸통이면. 아래 break 후부터 정상적일 때 코드
+                TF = True
+                break
+            if graph[nx][ny] == 1:                    # 사과 있으면 apple = 1로 기록해놓기
+                apple = 1
+            if not baem2:  # 마지막 꼬리이면
+                baem.append([nx, ny, aa, dd, tt])
+                graph[nx][ny] = aa
+                if apple == 1:                        # apple = 1이면 3 넣고, 0이면 지우기
+                    apple = 0
+                    graph[x][y] = 3
+                    baem.append([x,y, 3, ddd, tt-1])
+                else:                                 # apple = 0이면
+                    graph[x][y] = 0
+
+            
+            else:  # 아니면
+                baem.append([nx, ny, aa, dd, tt])
+                graph[nx][ny] = aa
+                graph[x][y] = 0
+            
+        
+
+        else:  # 벽이면
+            TF = True
+            break
+
+    if TF:
+        print(tt)
+        break
