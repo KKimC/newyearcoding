@@ -16,22 +16,21 @@ def fill_water(x,y):
     global answer
 
     axis = deque([(x,y)])
-    fill,cnt = [(x,y)],0
+    fill,cnt = 1,0 #0개수, 벽의 개수
 
     while axis:
         x,y = axis.popleft()
         for k in range(2):
             ny = y + dy[k]
             if 0<=x<r and 0<=ny<c and not visited[x][ny]:
-                visited[x][ny] = True
-                if blocks[x][ny] == 1:
-                    visited[x][ny] = False #벽은 재사용되어야 하기 때문에..!
+                if blocks[x][ny] == 1: #벽은 재사용되어야 하기 때문에..! visited = False
                     cnt += 1
                 else: 
-                    fill.append((x,ny))
+                    visited[x][ny] = True
+                    fill += 1
                     axis.append((x,ny))
     
-    if cnt == 2: answer += len(fill) #양끝이 벽인 경우
+    if cnt == 2: answer += fill #양끝이 벽인 경우
 
 for i in range(r):
     for j in range(c):
