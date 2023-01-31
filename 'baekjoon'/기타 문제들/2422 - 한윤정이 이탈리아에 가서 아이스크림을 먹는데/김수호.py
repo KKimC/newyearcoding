@@ -29,7 +29,6 @@ def dfs(level, number):
             if not i in icecream:
                 for xx in icecream:
                     if xx in aa[i]:
-                        
                         TF = True
                         break
                 if TF:
