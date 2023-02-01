@@ -3,209 +3,149 @@ import copy
 
 n, m = map(int, input().split())
 graph = [list(map(str, input().split())) for _ in range(n)]
+temp_graph = copy.deepcopy(graph)
 
 def up(x, y):
-    # 각각, 0을 #으로 바꾸는 갯수를 return한다.
-    # 그래서 CCTV를 지나갈 때는 count가 안된다.
-    # 출발하는 자리도 포함 안했다.
     if 0<=x-1:
-        if graph[x-1][y] == '6':
+        if temp_graph[x-1][y] == '6':
             return 0
         else:
-            if graph[x-1][y] == '0':
+            if temp_graph[x-1][y] == '0':
                 temp_graph[x-1][y] = '#'
-                return up(x-1, y) + 1
-            else:
-                return up(x-1, y)
-    else:
-        return 0
+            return up(x-1, y)
 
 def down(x, y):
     if x+1<n:
-        if graph[x+1][y] == '6':
-            return 0
+        if temp_graph[x+1][y] == '6':
+            return
         else:
-            if graph[x+1][y] == '0':
+            if temp_graph[x+1][y] == '0':
                 temp_graph[x+1][y] = '#'
-                return down(x+1, y) + 1
-            else:
-                return down(x+1, y)
-    else:
-        return 0
+            return down(x+1, y)
 
 def right(x, y):
     if y+1<m:
-        if graph[x][y+1] == '6':
-            return 0
+        if temp_graph[x][y+1] == '6':
+            return
         else:
-            if graph[x][y+1] == '0':
+            if temp_graph[x][y+1] == '0':
                 temp_graph[x][y+1] = '#'
-                return right(x, y+1) + 1
-            else:
-                return right(x, y+1)
-    else:
-        return 0
+            return right(x, y+1)
 
 def left(x, y):
     if 0<=y-1:
-        if graph[x][y-1] == '6':
-            return 0
+        if temp_graph[x][y-1] == '6':
+            return
         else:
-            if graph[x][y-1] == '0':
+            if temp_graph[x][y-1] == '0':
                 temp_graph[x][y-1] = '#'
-                return left(x, y-1) + 1
-            else:
-                return left(x, y-1)
-    else:
-        return 0
+            return left(x, y-1)
 
-def C5(x, y):
-    global graph, temp_graph
-    temp_graph = copy.deepcopy(graph)
+def C5(x, y, dir):
     up(x, y)
     down(x, y)
     right(x, y)
     left(x, y)
-    graph = copy.deepcopy(temp_graph)
 
-def C4(x, y):
-    global temp_graph, graph
-    maxx = -1
+def C4(x, y, dir):
     
-    temp_graph = copy.deepcopy(graph)
-    a = up(x,y)+right(x,y)+down(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
+    if dir == 0:
+        up(x, y)
+        right(x, y)
+        down(x, y)
     
-    temp_graph = copy.deepcopy(graph)
-    a = right(x,y)+down(x,y)+left(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = down(x,y) + left(x,y) + up(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = left(x,y) + up(x,y) + right(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
+    elif dir == 1:
+        right(x,y)
+        down(x,y)
+        left(x,y)
         
-#     print(a)
-    graph = copy.deepcopy(ex_graph)
+    elif dir == 2:
+        down(x,y)
+        left(x,y)
+        up(x,y)
+        
+    elif dir == 3:
+        left(x,y)
+        up(x,y)
+        right(x,y)
+    
+def C3(x, y, dir):
+    
+    if dir == 0:
+        up(x,y)
+        right(x,y)
+        
+    if dir == 1:
+        right(x,y)
+        down(x,y)
+    
+    if dir == 2:
+        down(x,y)
+        left(x,y)
+    
+    if dir == 3:
+        left(x,y)
+        up(x,y)
+    
+def C2(x, y, dir):
+    
+    if dir == 0 or dir == 2:
+        up(x,y)
+        down(x,y)
+    
+    if dir == 1 or dir == 3:
+        right(x,y)
+        left(x,y)
+    
+def C1(x, y, dir):
+    if dir == 0:
+        up(x,y)
+    
+    if dir == 1:
+        right(x,y)
+    
+    if dir == 2:
+        down(x,y)
+    
+    if dir == 3:
+        left(x,y)
 
-def C3(x, y):
-    global temp_graph, graph
-    maxx = -1
-    
-    temp_graph = copy.deepcopy(graph)
-    a = up(x,y)+right(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = right(x,y)+down(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = down(x,y) + left(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = left(x,y) + up(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
+def CC(x, y, num, dir):
+    if num == '1':
+        C1(x, y, dir)
+    elif num == '2':
+        C2(x, y, dir)
+    elif num == '3':
+        C3(x, y, dir)
+    elif num == '4':
+        C4(x, y, dir)
+    elif num == '5':
+        C5(x, y, dir)
 
-#     print(a)
-    graph = copy.deepcopy(ex_graph)
-
-def C2(x, y):
-    global temp_graph, graph
-    maxx = -1
-    
-    temp_graph = copy.deepcopy(graph)
-    a = up(x,y)+down(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = right(x,y)+left(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-#     print(a)
-    graph = copy.deepcopy(ex_graph)
-
-def C1(x, y):
-    global temp_graph, graph
-    maxx = -1
-    
-    temp_graph = copy.deepcopy(graph)
-    a = up(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = right(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = down(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-    
-    temp_graph = copy.deepcopy(graph)
-    a = left(x,y)
-    if maxx<a:
-        ex_graph = copy.deepcopy(temp_graph)
-        maxx = a
-
-#     print(a)
-    graph = copy.deepcopy(ex_graph)
-
+cclist = []
 for i in range(n):
     for j in range(m):
-        if graph[i][j] == '5':
-            C5(i,j)
+        if graph[i][j] != '0' and graph[i][j] != '6':
+            cclist.append([i,j,graph[i][j]])
 
-for i in range(n):
-    for j in range(m):
-        if graph[i][j] == '4':
-            C4(i,j)
+aaa = [[] for _ in range(len(cclist))]
+minn = 2222
+def dfs(level):
+    global temp_graph, minn
+    if level == len(cclist):
+        cnt = 0
+        for i in range(n):
+            cnt += temp_graph[i].count('0')
+        if minn > cnt:
+            minn = cnt
+        return
 
-for i in range(n):
-    for j in range(m):
-        if graph[i][j] == '3':
-            C3(i,j)
+    for i in range(4):
+        a = cclist[level]
+        aaa[level] = copy.deepcopy(temp_graph)
+        CC(a[0], a[1], a[2], i)
+        dfs(level+1)
+        temp_graph = copy.deepcopy(aaa[level])
 
-for i in range(n):
-    for j in range(m):
-        if graph[i][j] == '2':
-            C2(i,j)
-
-for i in range(n):
-    for j in range(m):
-        if graph[i][j] == '1':
-            C1(i,j)
-
-cnt = 0
-for i in range(n):
-    cnt += graph[i].count('0')
-print(cnt)
+dfs(0)
+print(minn)
