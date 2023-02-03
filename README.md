@@ -1,7 +1,7 @@
 # 시뮬레이션 골드
 
 - 백준 문제집 [시뮬레이션 골드](https://www.acmicpc.net/group/workbook/view/16649/53251)
-- 코드 링크
+- [코드 링크](https://github.com/KKimC/newyearcoding/tree/main/%EB%B0%B1%EC%A4%80/%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98%EA%B3%A8%EB%93%9C)
 
 | NO  | 문제 |  제목 및 풀이 | 난이도 | 수호 | 성현 | 동희 | 현빈 | 유림 | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |:-----: |:-----: |:-----: | :-----: |
