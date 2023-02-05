@@ -27,3 +27,18 @@
 |2| [16935](https://www.acmicpc.net/problem/16935) | 배열돌리기3 | 골드5 |  |  |  | ✅ | ✅ | 
 |3| [17123](https://www.acmicpc.net/problem/17123) | 배열놀이 | 실버1 |  |  |  | ✅ | ✅ | 
 |4| [17276](https://www.acmicpc.net/problem/17276) | 배열돌리기(45도) | 실버2 |  |  |  | ✅ | ✅ |
+
+
+# DFS/BFS 핵기초 (골드티어만 선정)
+
+- 백준 문제집 [DFS/BFS 핵기](https://www.acmicpc.net/group/workbook/view/16649/53022)
+
+| NO  | 문제 |  제목 및 풀이 | 난이도 | 수호 | 성현 | 동희 | 현빈 | 유림 | 
+| :-----: | :-----: | :-----: | :-----: | :-----: |:-----: |:-----: |:-----: | :-----: |
+|1| [7576](https://www.acmicpc.net/problem/7576) | 토마토 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
+|2| [7569](https://www.acmicpc.net/problem/7569) | 토마토(3차원) | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
+|3| [10026](https://www.acmicpc.net/problem/10026) | 적록색약 | 골드5 |  |  | ✅ | ✅ | ✅ | 
+|4| [14502](https://www.acmicpc.net/problem/14502) | 연구소 | 골드4 |  |  |  |  | ✅ |
+|5| [1987](https://www.acmicpc.net/problem/1987) | 알파벳 | 골드4 |  |  |  |  | ✅ |
+|6| [2589](https://www.acmicpc.net/problem/2589) | 보물섬 | 골드5 |  |  |  |  |  |
+|7| [2636](https://www.acmicpc.net/problem/2636) | 치즈 | 골드4 | ✅ |  |  |  |  |
