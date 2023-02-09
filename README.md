@@ -42,8 +42,8 @@
 
 | NO  | 문제 |  제목 및 풀이 | 난이도 | 수호 | 성현 | 동희 | 현빈 | 유림 | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |:-----: |:-----: |:-----: | :-----: |
-|1| [7576](https://www.acmicpc.net/problem/7576) | 토마토 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
-|2| [7569](https://www.acmicpc.net/problem/7569) | 토마토(3차원) | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
+|1| [7576](https://www.acmicpc.net/problem/7576) | 토마토 | 골드5 | ✅ | ✅ | ✅ | ✅ | ✅ | 
+|2| [7569](https://www.acmicpc.net/problem/7569) | 토마토(3차원) | 골드5 | ✅ | ✅ | ✅ | ✅ | ✅ | 
 |3| [10026](https://www.acmicpc.net/problem/10026) | 적록색약 | 골드5 |  |  | ✅ | ✅ | ✅ | 
 |4| [14502](https://www.acmicpc.net/problem/14502) | 연구소 | 골드4 |  |  |  |  | ✅ |
 |5| [1987](https://www.acmicpc.net/problem/1987) | 알파벳 | 골드4 |  |  |  |  | ✅ |
