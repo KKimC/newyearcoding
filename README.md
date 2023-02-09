@@ -15,7 +15,7 @@
 |8| [16236](https://www.acmicpc.net/problem/16236) | 아기상어 | 골드3 | ✅ |  | ✅ |  | ✅ | 
 |9| [17144](https://www.acmicpc.net/problem/17144) | 미세먼지안녕 | 골드4 |  |  | ✅ |  | ✅ | 
 |10| [14719](https://www.acmicpc.net/problem/14719) | 빗물 | 골드5 | ✅ |  |  | ✅ | ✅ | 
-|11| [23289](https://www.acmicpc.net/problem/23289) | 온풍기안녕! | 플래5 |  |  |  |  | ✅ | 
+|11| [23289](https://www.acmicpc.net/problem/23289) | 온풍기안녕! | 플래5 | ✅ |  |  |  | ✅ | 
 |12| [17143](https://www.acmicpc.net/problem/17143) | 낚시왕 | 골드1 |  |  |  |  | ✅ | 
 |13| [17822](https://www.acmicpc.net/problem/17822) | 원판 돌리기 | 골드2 |  |  |  |  | ✅  | 
 
