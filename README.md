@@ -20,6 +20,7 @@
 |13| [17822](https://www.acmicpc.net/problem/17822) | 원판 돌리기 | 골드2 |  |  |  |  | ✅  | 
 |14| [19236](https://www.acmicpc.net/problem/19236) | 청소년상어 | 골드2 |  |  |  |  | ✅ | 
 |15| [1941](https://www.acmicpc.net/problem/1941) | 소문난칠공주 | 골드3 | ✅ |  |  |  |  | 
+|16| [19237](https://www.acmicpc.net/problem/19237) | 어른상어 | 골드2 |  |  |  |  | ✅ | 
 
 
 
