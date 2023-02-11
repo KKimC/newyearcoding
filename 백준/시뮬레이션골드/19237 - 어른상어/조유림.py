@@ -6,6 +6,7 @@
 
 # 기존상어가 빈칸으로 이동한 거일수도, 아님 자신의 냄새를 따라서 
 # 이동한 것일 수도 있기 때문에 배열을 복사해서 기록해야 한다
+# 새로 등장한 상어를 K로 기록할 경우에 기존 상어와 새로 등장한 상어를 구분할 수 없음 -> K+1로 시작하자
 import copy
 N,M,K = map(int,input().split())
 arr = [[[0,0] for _ in range(N)] for _ in range(N)]
@@ -75,6 +76,7 @@ def move(arr):
                     break
     return arr_
 
+# 시간 변화 기록
 def time_change():
     for x in range(N):
         for y in range(N):
@@ -87,13 +89,14 @@ def time_change():
             else: # 그외에 -1씩
                 arr[x][y] = [i,time]
 
+# 1번 상어 빼고 다 죽었나? 확인
 def check_death():
     for i in range(2,M+1):
         if sharkcur[i][0] != -1: #살아있는 경우
             return False
     return True
 
-time_change()
+time_change() 
 for i in range(1,1001):
     arr = move(arr)
     time_change()
