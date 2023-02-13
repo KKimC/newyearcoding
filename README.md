@@ -54,4 +54,4 @@
 |4| [14502](https://www.acmicpc.net/problem/14502) | 연구소 | 골드4 |  |  | ✅ |  | ✅ |
 |5| [1987](https://www.acmicpc.net/problem/1987) | 알파벳 | 골드4 |  |  |  |  | ✅ |
 |6| [2589](https://www.acmicpc.net/problem/2589) | 보물섬 | 골드5 | ✅ |  |  | ✅ |  |
-|7| [2636](https://www.acmicpc.net/problem/2636) | 치즈 | 골드4 | ✅ |  | ✅ |  |  |
+|7| [2636](https://www.acmicpc.net/problem/2636) | 치즈 | 골드4 | ✅ |  | ✅ | ✅ |  |
