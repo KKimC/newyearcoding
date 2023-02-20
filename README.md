@@ -37,7 +37,7 @@
 |2| [16935](https://www.acmicpc.net/problem/16935) | 배열돌리기3 | 골드5 | ✅ |  |  | ✅ | ✅ | 
 |3| [17123](https://www.acmicpc.net/problem/17123) | 배열놀이 | 실버1 |  |  |  | ✅ | ✅ | 
 |4| [17276](https://www.acmicpc.net/problem/17276) | 배열돌리기(45도) | 실버2 |  |  |  | ✅ | ✅ |
-|5| [17406](https://www.acmicpc.net/problem/17406) | 배열돌리기4 | 골드4 |  |  |  | | ✅ |
+|5| [17406](https://www.acmicpc.net/problem/17406) | 배열돌리기4 | 골드4 | ✅ |  |  | | ✅ |
 |6| [17470](https://www.acmicpc.net/problem/17470) | 배열돌리기5 | 플래5 |  |  |  | |  |
 |7| [20327](https://www.acmicpc.net/problem/20327) | 배열돌리기6 | 골드3 |  |  |  | |  |
 |8| [20328](https://www.acmicpc.net/problem/20328) | 배열돌리기7 | 플래3 |  |  |  | | |
