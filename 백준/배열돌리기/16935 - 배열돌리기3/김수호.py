@@ -40,7 +40,6 @@ def move(c):
 
 
 movelist = list(map(int, input().split()))
-# print(movelist)
 for i in movelist:
     move(i)
 
