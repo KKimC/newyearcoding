@@ -20,7 +20,7 @@
 |13| [17143](https://www.acmicpc.net/problem/17143) | 낚시왕 | 골드1 |  |  |  |  | ✅ | 
 |14| [17822](https://www.acmicpc.net/problem/17822) | 원판 돌리기 | 골드2 |  |  |  |  | ✅  | 
 |15| [19236](https://www.acmicpc.net/problem/19236) | 청소년상어 | 골드2 | ✅ |  |  |  | ✅ | 
-|16| [1941](https://www.acmicpc.net/problem/1941) | 소문난칠공주 | 골드3 | ✅ |  |  |  |  | 
+|16| [1941](https://www.acmicpc.net/problem/1941) | 소문난칠공주 | 골드3 | ✅ |  |  |  | ✅ | 
 |17| [19237](https://www.acmicpc.net/problem/19237) | 어른상어 | 골드2 |  |  |  |  | ✅ | 
 |18| [17822](https://www.acmicpc.net/problem/17822) | 새로운게임2 | 골드2 |  |  |  |  | ✅ | 
 |19| [19238](https://www.acmicpc.net/problem/19238) | 스타트택시 | 골드2 |  |  |  |  | ✅ | 
@@ -42,7 +42,7 @@
 |6| [17470](https://www.acmicpc.net/problem/17470) | 배열돌리기5 | 플래5 | ✅ |  |  | |  |
 |7| [20327](https://www.acmicpc.net/problem/20327) | 배열돌리기6 | 골드3 |  |  |  | |  |
 |8| [20328](https://www.acmicpc.net/problem/20328) | 배열돌리기7 | 플래3 |  |  |  | | |
-|9| [1022](https://www.acmicpc.net/problem/1022) | 소용돌이 출력하기 | 골드4 |  |  |  | ✅ | ✅ |
+|9| [1022](https://www.acmicpc.net/problem/1022) | 소용돌이 출력하기 | 골드4 | ✅ |  |  | ✅ | ✅ |
 
 
 # DFS/BFS 핵기초 (골드티어만 선정)
