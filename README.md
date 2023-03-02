@@ -9,8 +9,8 @@
 |2| [10875](https://www.acmicpc.net/problem/10875) | 뱀 | 플래5 | ✅ |  |  |  |  | 
 |3| [12100](https://www.acmicpc.net/problem/12100) | 2048(Easy) | 골드2 | ✅ | ✅ |  |  | ✅ | 
 |4| [13460](https://www.acmicpc.net/problem/13460) | 구슬탈출2 | 골드1 |  |  |  |  | ✅ | 
-|5| [14503](https://www.acmicpc.net/problem/14503) | 로봇청소기 | 골드5 |  |  | ✅ | ✅ | ✅ | 
-|6| [14891](https://www.acmicpc.net/problem/14891) | 톱니바퀴 | 골드5 |  |  | ✅ |  | ✅ | 
+|5| [14503](https://www.acmicpc.net/problem/14503) | 로봇청소기 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
+|6| [14891](https://www.acmicpc.net/problem/14891) | 톱니바퀴 | 골드5 | ✅ |  | ✅ |  | ✅ | 
 |7| [16234](https://www.acmicpc.net/problem/16234) | 인구이동 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
 |8| [16235](https://www.acmicpc.net/problem/16235) | 나무재테크 | 골드3 | ✅ |  | ✅ |  | ✅ | 
 |9| [16236](https://www.acmicpc.net/problem/16236) | 아기상어 | 골드3 | ✅ |  | ✅ | ✅ | ✅ | 
