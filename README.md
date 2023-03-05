@@ -7,12 +7,12 @@
 | :-----: | :-----: | :-----: | :-----: | :-----: |:-----: |:-----: |:-----: | :-----: |
 |1| [3190](https://www.acmicpc.net/problem/3190) | 뱀 | 골드4 | ✅ | ✅ | ✅ | ✅ | ✅ | 
 |2| [10875](https://www.acmicpc.net/problem/10875) | 뱀 | 플래5 | ✅ |  |  |  |  | 
-|3| [12100](https://www.acmicpc.net/problem/12100) | 2048(Easy) | 골드2 | ✅ | ✅ |  |  | ✅ | 
+|3| [12100](https://www.acmicpc.net/problem/12100) | 2048(Easy) | 골드2 | ✅ | ✅ |  | ✅ | ✅ | 
 |4| [13460](https://www.acmicpc.net/problem/13460) | 구슬탈출2 | 골드1 |  |  |  |  | ✅ | 
 |5| [14503](https://www.acmicpc.net/problem/14503) | 로봇청소기 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
-|6| [14891](https://www.acmicpc.net/problem/14891) | 톱니바퀴 | 골드5 | ✅ |  | ✅ |  | ✅ | 
+|6| [14891](https://www.acmicpc.net/problem/14891) | 톱니바퀴 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
 |7| [16234](https://www.acmicpc.net/problem/16234) | 인구이동 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
-|8| [16235](https://www.acmicpc.net/problem/16235) | 나무재테크 | 골드3 | ✅ |  | ✅ |  | ✅ | 
+|8| [16235](https://www.acmicpc.net/problem/16235) | 나무재테크 | 골드3 | ✅ |  | ✅ | ✅ | ✅ | 
 |9| [16236](https://www.acmicpc.net/problem/16236) | 아기상어 | 골드3 | ✅ |  | ✅ | ✅ | ✅ | 
 |10| [17144](https://www.acmicpc.net/problem/17144) | 미세먼지안녕 | 골드4 | ✅ |  | ✅ | ✅ | ✅ | 
 |11| [14719](https://www.acmicpc.net/problem/14719) | 빗물 | 골드5 | ✅ |  |  | ✅ | ✅ | 
@@ -21,7 +21,7 @@
 |14| [17822](https://www.acmicpc.net/problem/17822) | 원판 돌리기 | 골드2 |  |  |  |  | ✅  | 
 |15| [19236](https://www.acmicpc.net/problem/19236) | 청소년상어 | 골드2 | ✅ |  |  |  | ✅ | 
 |16| [1941](https://www.acmicpc.net/problem/1941) | 소문난칠공주 | 골드3 | ✅ |  |  |  | ✅ | 
-|17| [19237](https://www.acmicpc.net/problem/19237) | 어른상어 | 골드2 |  |  |  |  | ✅ | 
+|17| [19237](https://www.acmicpc.net/problem/19237) | 어른상어 | 골드2 |  |  |  | ✅ | ✅ | 
 |18| [17822](https://www.acmicpc.net/problem/17822) | 새로운게임2 | 골드2 |  |  |  |  | ✅ | 
 |19| [19238](https://www.acmicpc.net/problem/19238) | 스타트택시 | 골드2 |  |  |  |  | ✅ | 
 
