@@ -47,7 +47,7 @@
 
 # DFS/BFS 핵기초 (골드티어만 선정)
 
-- 백준 문제집 [DFS/BFS 핵기](https://www.acmicpc.net/group/workbook/view/16649/53022)
+- 백준 문제집 [DFS/BFS 핵기초](https://www.acmicpc.net/group/workbook/view/16649/53022)
 
 | NO  | 문제 |  제목 및 풀이 | 난이도 | 수호 | 성현 | 동희 | 현빈 | 유림 | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |:-----: |:-----: |:-----: | :-----: |
