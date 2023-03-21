@@ -19,11 +19,11 @@
 |12| [23289](https://www.acmicpc.net/problem/23289) | 온풍기안녕! | 플래5 | ✅ |  |  |  | ✅ | 
 |13| [17143](https://www.acmicpc.net/problem/17143) | 낚시왕 | 골드1 |  |  | ✅ |  | ✅ | 
 |14| [17822](https://www.acmicpc.net/problem/17822) | 원판 돌리기 | 골드2 | ✅ |  |  |  | ✅  | 
-|15| [19236](https://www.acmicpc.net/problem/19236) | 청소년상어 | 골드2 | ✅ |  |  |  | ✅ | 
+|15| [19236](https://www.acmicpc.net/problem/19236) | 청소년상어 | 골드2 | ✅ |  |  | ✅ | ✅ | 
 |16| [1941](https://www.acmicpc.net/problem/1941) | 소문난칠공주 | 골드3 | ✅ |  |  |  | ✅ | 
 |17| [19237](https://www.acmicpc.net/problem/19237) | 어른상어 | 골드2 |  |  |  | ✅ | ✅ | 
 |18| [17822](https://www.acmicpc.net/problem/17822) | 새로운게임2 | 골드2 |  |  |  |  | ✅ | 
-|19| [19238](https://www.acmicpc.net/problem/19238) | 스타트택시 | 골드2 | ✅ |  | ✅ |  | ✅ | 
+|19| [19238](https://www.acmicpc.net/problem/19238) | 스타트택시 | 골드2 | ✅ |  | ✅ | ✅ | ✅ | 
 
 
 
@@ -55,6 +55,6 @@
 |2| [7569](https://www.acmicpc.net/problem/7569) | 토마토(3차원) | 골드5 | ✅ | ✅ | ✅ | ✅ | ✅ | 
 |3| [10026](https://www.acmicpc.net/problem/10026) | 적록색약 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
 |4| [14502](https://www.acmicpc.net/problem/14502) | 연구소 | 골드4 | ✅ |  | ✅ | ✅ | ✅ |
-|5| [1987](https://www.acmicpc.net/problem/1987) | 알파벳 | 골드4 | ✅ |  | ✅ |  | ✅ |
+|5| [1987](https://www.acmicpc.net/problem/1987) | 알파벳 | 골드4 | ✅ |  | ✅ | ✅ | ✅ |
 |6| [2589](https://www.acmicpc.net/problem/2589) | 보물섬 | 골드5 | ✅ |  | ✅ | ✅ |  |
 |7| [2636](https://www.acmicpc.net/problem/2636) | 치즈 | 골드4 | ✅ |  | ✅ | ✅ |  |
