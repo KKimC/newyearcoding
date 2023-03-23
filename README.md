@@ -8,7 +8,7 @@
 |1| [3190](https://www.acmicpc.net/problem/3190) | 뱀 | 골드4 | ✅ | ✅ | ✅ | ✅ | ✅ | 
 |2| [10875](https://www.acmicpc.net/problem/10875) | 뱀 | 플래5 | ✅ |  |  |  |  | 
 |3| [12100](https://www.acmicpc.net/problem/12100) | 2048(Easy) | 골드2 | ✅ | ✅ |  | ✅ | ✅ | 
-|4| [13460](https://www.acmicpc.net/problem/13460) | 구슬탈출2 | 골드1 | ✅ |  |  |  | ✅ | 
+|4| [13460](https://www.acmicpc.net/problem/13460) | 구슬탈출2 | 골드1 | ✅ |  |  | ✅ | ✅ | 
 |5| [14503](https://www.acmicpc.net/problem/14503) | 로봇청소기 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
 |6| [14891](https://www.acmicpc.net/problem/14891) | 톱니바퀴 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
 |7| [16234](https://www.acmicpc.net/problem/16234) | 인구이동 | 골드5 | ✅ |  | ✅ | ✅ | ✅ | 
@@ -18,7 +18,7 @@
 |11| [14719](https://www.acmicpc.net/problem/14719) | 빗물 | 골드5 | ✅ |  |  | ✅ | ✅ | 
 |12| [23289](https://www.acmicpc.net/problem/23289) | 온풍기안녕! | 플래5 | ✅ |  |  |  | ✅ | 
 |13| [17143](https://www.acmicpc.net/problem/17143) | 낚시왕 | 골드1 |  |  | ✅ |  | ✅ | 
-|14| [17822](https://www.acmicpc.net/problem/17822) | 원판 돌리기 | 골드2 | ✅ |  |  |  | ✅  | 
+|14| [17822](https://www.acmicpc.net/problem/17822) | 원판 돌리기 | 골드2 | ✅ |  |  | ✅ | ✅  | 
 |15| [19236](https://www.acmicpc.net/problem/19236) | 청소년상어 | 골드2 | ✅ |  |  | ✅ | ✅ | 
 |16| [1941](https://www.acmicpc.net/problem/1941) | 소문난칠공주 | 골드3 | ✅ |  |  |  | ✅ | 
 |17| [19237](https://www.acmicpc.net/problem/19237) | 어른상어 | 골드2 |  |  |  | ✅ | ✅ | 
